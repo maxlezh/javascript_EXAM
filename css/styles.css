@@ -1,0 +1,290 @@
+body
+{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.game
+{
+    position: relative;
+
+    width: 980px;
+    height: 740px;
+    margin: 100px auto;
+
+    background: #333;
+}
+
+.game__info
+{
+    position: absolute;
+    top: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+
+    text-align: center;
+}
+
+.game__score,
+.game__highscore {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    font-size: 20px;
+
+}
+
+.score__info,
+.highscore__info
+{
+    color: white;
+    margin-top: 30px;
+}
+
+.score__name,
+.highscore__name
+{
+    color: limegreen;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.info-box
+{
+    font-size: 20px;
+    line-height: 40px;
+
+    display: inline-block;
+
+    width: 200px;
+
+    text-transform: uppercase;
+
+    color: limegreen;
+    border: 4px solid limegreen;
+    border-radius: 10px;
+}
+
+hr
+{
+    margin: 5px 0;
+}
+
+.info-time
+{
+    font-size: 20px;
+    line-height: 40px;
+
+    display: inline-block;
+
+    width: 200px;
+    margin-right: -210px;
+
+    text-transform: uppercase;
+
+    color: limegreen;
+}
+
+.game__start
+{
+    position: absolute;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    background: #333;
+}
+
+.game__name
+{
+    font-size: 50px;
+
+    padding-top: 150px;
+
+    cursor: default;
+    text-transform: uppercase;
+
+    color: #fd6f63;
+}
+
+.start__menu
+{
+    font-size: 25px;
+    line-height: 30px;
+
+    position: relative;
+
+    width: 500px;
+    margin: 100px auto;
+
+    cursor: pointer;
+    text-transform: uppercase;
+
+    color: #5281cb;
+}
+
+.menu__b,
+.menu__c {
+    color: dimgray;
+}
+
+.hover:hover::before
+{
+    position: absolute;
+    left: -10px;
+
+    content: '*';
+
+    color: white;
+}
+
+.game__action
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 500px;
+    margin: auto;
+
+    background: url('../image/bg.png') center no-repeat;
+    background-size: 100%;
+}
+
+.game__man
+{
+    position: absolute;
+    top: 80px;
+    right: 0;
+
+    display: none;
+    overflow: hidden;
+    zoom: 2.7;
+
+    width: 33px;
+    height: 65px;
+
+    background: url('../image/gunman.png') no-repeat 0 0;
+}
+
+.man-position-in-wait
+{
+    background-position: -100px 0;
+}
+
+.move-man
+{
+    right: 165px;
+
+    transition: 4.5s linear;
+}
+
+.bg-position-in-start-to-shoot
+{
+    transition: 0s;
+    transform: scale(-1,1);
+
+    background-position: -202px 0;
+}
+
+.bg-position-in-prefire
+{
+    background-position: -235px 0;
+}
+
+.bg-position-in-fire
+{
+    background-position: -269px 0;
+}
+
+.man-move-with-win
+{
+    right: 0;
+
+    transition: 5s linear;
+    animation: play .4s steps(3) infinite;
+
+    background-position: 0 0;
+}
+
+.man-death
+{
+    background-position: -337px 0;
+}
+
+.man-death-full
+{
+    background-position: -372px 0;
+}
+
+.going-man
+{
+    animation: play .3s steps(3) infinite;
+}
+
+@keyframes play
+{
+    100%
+    {
+        background-position: -99px 0;
+    }
+}
+
+.game__status
+{
+    line-height: 50px;
+
+    position: absolute;
+    z-index: 3;
+    top: 200px;
+    right: 0;
+    left: 0;
+
+    display: none;
+
+    width: 200px;
+    height: 50px;
+    margin: auto;
+
+    text-align: center;
+
+    color: black;
+    border-radius: 10px;
+    background: white;
+}
+
+.game__over-paranja
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 500px;
+    margin: auto;
+
+    opacity: .5;
+    background: #e74c3c;
+}
+
+.display-none
+{
+    display: none;
+}
+
+.display-block
+{
+    display: block;
+}
